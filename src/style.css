@@ -1,0 +1,99 @@
+*{
+    font-family: sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    padding: 1em;
+}
+
+button{
+    background-color: #4F4F4F;
+    
+    font-size: 0.5em;
+
+    border: none;
+    padding: 0.5em;
+
+    color: aliceblue;
+
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+#open-modal{
+    background-color: #19a99b;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+#fade{
+
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal{
+    width: 400px;
+    max-width: 80%;
+
+    display: inline-block;
+    
+    padding:1em;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    box-shadow: #403f3f 3px 2px 0px 0;
+
+    border-radius: 0.5em;
+
+    z-index: 10;
+}
+
+#modal-header{
+    border-bottom: solid #4f4f4f6c 1px;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+p{
+    text-align: justify;
+    font-size: 0.7em;
+}
+
+#footer-modal{
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 1em;
+}
+
+#modal,
+#fade{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#modal.hide,
+#fade.hide{
+    pointer-events: none;
+    opacity: 0;
+}
